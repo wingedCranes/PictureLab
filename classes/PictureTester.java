@@ -92,6 +92,12 @@ public class PictureTester
     beach.keepOnlyBlue();
     beach.explore();
   }
+  public static void testFixUnderwater(){
+    Picture water = new Picture("water.jpg");
+    water.explore();
+    water.fixUnderwater();
+    water.explore();
+  }
   
   /** Main method for testing.  Every class can have a main
     * method in Java */
@@ -106,7 +112,7 @@ public class PictureTester
     //testKeepOnlyGreen();
     //testNegate();
     //testGrayscale();
-    //testFixUnderwater();
+    testFixUnderwater();
     //testMirrorVertical();
     //testmirrorVerticalRightToLeft();
     //mirrorHorizontalBotToTop();

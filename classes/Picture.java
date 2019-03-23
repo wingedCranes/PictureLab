@@ -191,7 +191,21 @@ public class Picture extends SimplePicture
       }
     }
   }
-  
+  public void mirrorHorizontalBotToTop(){
+    Pixel[][] pixels = this.getPixels2D();
+    Pixel botPixel = null;
+    Pixel topPixel = null;
+    int width = pixels[0].length;
+    for (int row = 0; row < pixels.length/2; row++)
+    {
+      for (int col = 0; col < width; col++)
+      {
+        botPixel = pixels[pixels.length - 1 -row][col];
+        topPixel = pixels[row][col];
+        topPixel.setColor(botPixel.getColor());
+      }
+    }
+  }
   /** Mirror just part of a picture of a temple */
   public void mirrorTemple()
   {
@@ -290,7 +304,20 @@ public class Picture extends SimplePicture
       }
     }
   }
-  
+
+  public void fixUnderwater()
+  {
+    Pixel[][] pixels = this.getPixels2D();
+    for (Pixel[] rowArray : pixels)
+    {
+      for (Pixel pixelObj : rowArray)
+      {
+        pixelObj.setRed((pixelObj.getRed() - 125) * 2);
+        pixelObj.setBlue((pixelObj.getBlue() - 125) * 2);
+        pixelObj.setGreen((pixelObj.getGreen() -125) * 2);
+      }
+    }
+  }
   
   /* Main method for testing - each class in Java can have a main 
    * method 
