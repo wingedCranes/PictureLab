@@ -303,6 +303,9 @@ public class Picture extends SimplePicture
     }   
   }
 
+  public void copy(int startRow, int endRow, int startCol, int endCol, Picture fromPic){
+
+  }
   /** Method to create a collage of several pictures */
   public void createCollage()
   {
