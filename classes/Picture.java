@@ -304,7 +304,11 @@ public class Picture extends SimplePicture
   }
 
   public void copy(int startRow, int endRow, int startCol, int endCol, Picture fromPic){
-
+    Pixel fromPixel = null;
+    Pixel toPixel = null;
+    Pixel[][] toPixels = this.getPixels2D();
+    Pixel[][] fromPixels = fromPic.getPixels2D();
+    //copy pixels over from from pic to start pic and then. Loop through the fromPic, to gather the pixel array.
   }
   /** Method to create a collage of several pictures */
   public void createCollage()
