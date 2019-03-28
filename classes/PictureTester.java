@@ -113,6 +113,14 @@ public class PictureTester
     water.fixUnderwater();
     water.explore();
   }
+
+  public static void testCopy(){
+    Picture femaleLionAndHall = new Picture("femaleLionAndHall.jpg");
+    Picture seagull = new Picture("seagull.jpg");
+    femaleLionAndHall.explore();
+    seagull.copy(femaleLionAndHall, 200, 450, 300, 550);
+    seagull.explore();
+  }
   
   /** Main method for testing.  Every class can have a main
     * method in Java */
@@ -136,7 +144,7 @@ public class PictureTester
     //testMirrorGull();
     //testMirrorDiagonal();
     //testCollage();
-    //testCopy();
+    testCopy();
     //testEdgeDetection();
     //testEdgeDetection2();
     //testChromakey();
